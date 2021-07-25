@@ -139,24 +139,7 @@ public class AccountDriver {
             System.out.print("Enter Transaction Fee: ");
             double fee = keyboard.nextDouble();
             account = new CheckingAccount(accountNumber, fee);
-        } else { // Savings account
-
-            System.out.print("Please enter Interest Rate: ");
-            double ir = keyboard.nextDouble();
-            account = new SavingsAccount(accountNumber, ir);
-        }
-        return account;
-    }
-
-    /**
-     * Menu to display options and get the user's selection
-     *
-     * @param keyboard
-     * @return choice
-     */
-    public static int menu(Scanner keyboard) {
-        System.out.println("Bank Account Menu");
-        System.out.println("1. Create New Account");
+        
         System.out.println("2. Deposit Funds");
         System.out.println("3. Withdraw Funds");
         System.out.println("4. Apply Interest");
